@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NASGP | National Association of Sessional GPs</title>
-  <meta name="description" content="The independent membership body for GP locums, salaried GPs, returners and retainers across the UK. Tools, community and a national voice — since 1997.">
+  <meta name="description" content="The independent membership body for GP locums, salaried GPs, returners and retainers across the UK. Tools, community and a national voice, since 1997.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -146,7 +146,7 @@
     .hero {
       padding-top: 68px;
       min-height: 100vh;
-      background: var(--accent-dark);
+      background: var(--primary-dark);
       display: grid;
       grid-template-rows: 1fr auto;
       position: relative;
@@ -197,16 +197,11 @@
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent-soft);
+      color: var(--accent-light);
       margin-bottom: 32px;
     }
 
-    .hero-kicker::before {
-      content: '';
-      width: 32px; height: 1px;
-      background: var(--accent-soft);
-      opacity: 0.6;
-    }
+    /* hero-kicker line removed */
 
     .hero-h1 {
       font-family: 'Fraunces', serif;
@@ -220,7 +215,7 @@
 
     .hero-h1 em {
       font-style: italic;
-      color: var(--accent-soft);
+      color: var(--accent-light);
     }
 
     .hero-sub {
@@ -280,6 +275,27 @@
       gap: 16px;
     }
 
+    .hero-photo-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .hero-photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(28,52,124,0.4) 100%);
+    }
+
     .hero-stat-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.10);
@@ -301,7 +317,7 @@
       letter-spacing: -0.02em;
     }
 
-    .hero-stat-card .num span { color: var(--accent-soft); }
+    .hero-stat-card .num span { color: var(--accent-light); }
 
     .hero-stat-card .lbl {
       font-size: 13px;
@@ -333,18 +349,19 @@
     }
 
     .hero-ticker-label {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: rgba(255,255,255,0.30);
+      color: rgba(255,255,255,0.35);
       white-space: nowrap;
-      margin-right: 36px;
+      margin-right: 40px;
+      flex-shrink: 0;
     }
 
     .hero-ticker-items {
       display: flex;
-      gap: 48px;
+      gap: 40px;
       flex-wrap: wrap;
     }
 
@@ -352,15 +369,17 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.55);
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.01em;
     }
 
-    .hero-ticker-item svg { color: var(--accent-soft); flex-shrink: 0; }
+    .hero-ticker-item svg { color: var(--accent); flex-shrink: 0; }
 
     /* ─── MARQUEE STRIP ───────────────────────────────── */
     .marquee-strip {
-      background: var(--accent);
+      background: var(--primary);
       padding: 16px 0;
       overflow: hidden;
       white-space: nowrap;
@@ -383,16 +402,16 @@
       align-items: center;
       gap: 16px;
       padding: 0 32px;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 500;
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.90);
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
     .marquee-dot {
       width: 5px; height: 5px;
-      background: var(--accent-soft);
+      background: var(--accent-light);
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -414,7 +433,7 @@
       display: block;
     }
 
-    .eyebrow.on-dark { color: var(--accent-soft); }
+    .eyebrow.on-dark { color: var(--accent-light); }
     .eyebrow.muted { color: var(--ink-light); }
 
     .display {
@@ -428,7 +447,7 @@
 
     .display em { font-style: italic; color: var(--primary); }
     .display.on-dark { color: #fff; }
-    .display.on-dark em { color: var(--accent-soft); }
+    .display.on-dark em { color: var(--accent-light); }
 
     .body-text {
       font-size: 17px;
@@ -571,7 +590,7 @@
 
     /* Right side — big quote block */
     .mission-right {
-      background: var(--accent-dark);
+      background: var(--primary-dark);
       border-radius: 24px;
       padding: 64px 56px;
       position: relative;
@@ -592,6 +611,21 @@
       bottom: -60px; left: -60px;
       width: 250px; height: 250px;
       background: radial-gradient(circle, rgba(232,130,26,0.15) 0%, transparent 65%);
+    }
+
+    .mission-photo-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 200px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .mission-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
     }
 
     .big-quote {
@@ -734,8 +768,46 @@
     }
 
     .tools-header {
-      max-width: 680px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
       margin-bottom: 80px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tools-header-left { }
+
+    .tools-header-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tools-header-stat {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 24px;
+      background: var(--sand);
+      border-radius: 12px;
+      border: 1px solid var(--rule);
+    }
+
+    .tools-header-stat .t-num {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--primary);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .tools-header-stat .t-lbl {
+      font-size: 14px;
+      color: var(--ink-light);
+      line-height: 1.5;
     }
 
     .tools-bento {
@@ -781,7 +853,7 @@
     }
 
     .bento-card.dark .bento-tag {
-      color: var(--accent-soft);
+      color: var(--accent-light);
       background: rgba(255,255,255,0.10);
     }
 
@@ -824,7 +896,7 @@
     .bento-card.dark .bento-features li { color: rgba(255,255,255,0.65); }
 
     .check-icon { color: var(--primary); flex-shrink: 0; }
-    .bento-card.dark .check-icon { color: var(--accent-soft); }
+    .bento-card.dark .check-icon { color: var(--accent-light); }
 
     .bento-link {
       display: inline-flex;
@@ -840,7 +912,7 @@
       transition: all 0.2s;
     }
 
-    .bento-card.dark .bento-link { color: var(--accent-soft); border-color: rgba(244,164,90,0.25); }
+    .bento-card.dark .bento-link { color: var(--accent-light); border-color: rgba(244,164,90,0.25); }
     .bento-link:hover { border-color: var(--primary); }
 
     /* Bento decorative accent */
@@ -861,7 +933,7 @@
     /* ─── COMMUNITY ───────────────────────────────────── */
     .community-section {
       padding: 140px 0;
-      background: var(--accent-dark);
+      background: var(--primary-dark);
       position: relative;
       overflow: hidden;
     }
@@ -911,8 +983,22 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      color: var(--accent-soft);
+      color: var(--accent-light);
       margin-bottom: 28px;
+    }
+
+    .comm-card-img {
+      width: 100%;
+      height: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .comm-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .comm-card h3 {
@@ -1018,7 +1104,7 @@
       transition: background 0.2s, transform 0.15s;
     }
 
-    .btn-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
 
     .btn-cta-outline {
       display: inline-flex;
@@ -1243,11 +1329,13 @@
         <span class="logo-wordmark">NASGP</span>
       </a>
       <nav id="main-nav">
-        <a href="#who">Who we are</a>
-        <a href="#membership">Membership</a>
-        <a href="#tools">Tools</a>
-        <a href="#community">Community</a>
-        <a href="#join" class="nav-cta">Join today</a>
+        <a href="#who">GPs</a>
+        <a href="#tools">Practices</a>
+        <a href="#tools">Systems</a>
+        <a href="#tools">LocumDeck</a>
+        <a href="#mission">About</a>
+        <a href="#join">Contact</a>
+        <a href="#" class="nav-cta">Join</a>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -1264,7 +1352,7 @@
       <div>
         <p class="hero-kicker">National Association of Sessional GPs</p>
         <h1 class="hero-h1">The home for every<br><em>sessional GP</em><br>in the UK</h1>
-        <p class="hero-sub">Practical tools, a national community, and an independent voice — built around the way sessional GPs actually work, since 1997.</p>
+        <p class="hero-sub">Practical tools, a national community, and an independent voice. Built around the way sessional GPs actually work, since 1997.</p>
         <div class="hero-btns">
           <a href="#join" class="btn-hero-primary">
             Join NASGP
@@ -1276,6 +1364,9 @@
         </div>
       </div>
       <div class="hero-right">
+        <div class="hero-photo-frame">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="GP in consultation" />
+        </div>
         <div class="hero-stat-card wide">
           <div>
             <div class="num">4,250<span>+</span></div>
@@ -1288,7 +1379,7 @@
         </div>
         <div class="hero-stat-card">
           <div class="num">1997</div>
-          <div class="lbl">Founded — proudly independent</div>
+          <div class="lbl">Founded, proudly independent</div>
         </div>
       </div>
     </div>
@@ -1353,7 +1444,7 @@
           <h2 class="display">If you're a sessional GP,<br>this is <em>your</em> organisation</h2>
         </div>
         <div>
-          <p class="body-text">Sessional general practice is the backbone of UK primary care — yet too often, systems and support structures are designed for partners. NASGP was founded in 1997 to change that.</p>
+          <p class="body-text">Sessional general practice is the backbone of UK primary care. Yet too often, systems and support structures are designed for partners. NASGP was founded in 1997 to change that.</p>
         </div>
       </div>
       <div class="who-grid stagger">
@@ -1373,7 +1464,7 @@
           <div class="who-cell-bar"></div>
           <div class="who-num">03</div>
           <h3>GP Returners</h3>
-          <p>Coming back after a break. Revalidation, appraisal, supported return pathways — we know this route and we'll walk it with you.</p>
+          <p>Coming back after a break. Revalidation, appraisal, supported return pathways. We know this route and we'll walk it with you.</p>
         </div>
         <div class="who-cell">
           <div class="who-cell-bar"></div>
@@ -1416,7 +1507,7 @@
               </div>
               <div class="pillar-text">
                 <h4>Practical tools</h4>
-                <p>LocumDeck, AppraisalAid and Spip — tools built around the realities of sessional practice.</p>
+                <p>LocumDeck, AppraisalAid and Spip: tools built around the realities of sessional practice.</p>
               </div>
             </div>
             <div class="pillar">
@@ -1425,18 +1516,21 @@
               </div>
               <div class="pillar-text">
                 <h4>Real community</h4>
-                <p>Over 100 local groups, an active online community and a podcast — because sessional practice shouldn't mean working alone.</p>
+                <p>Over 100 local groups, an active online community and a podcast. Sessional practice shouldn't mean working alone.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="mission-right fade-up" style="transition-delay: 0.12s">
+          <div class="mission-photo-frame">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Medical professional" />
+          </div>
           <div class="big-quote">
             <div class="big-q-mark">"</div>
-            <p class="big-q-text">NASGP has been the one constant throughout my locum career. The community, the tools, the representation — it's the difference between feeling invisible and feeling like you belong to something that fights for you.</p>
+            <p class="big-q-text">NASGP has been the one constant throughout my locum career. The community, the tools, the representation. It's the difference between feeling invisible and feeling like you belong to something that fights for you.</p>
             <div class="big-q-attr">
               <strong>Dr Sarah Calloway</strong>
-              GP Locum, West Midlands — member since 2014
+              GP Locum, West Midlands, member since 2014
             </div>
           </div>
           <div class="big-q-divider">
@@ -1465,7 +1559,7 @@
           <h2 class="display">Everything in one<br><em>membership</em></h2>
         </div>
         <div>
-          <p class="body-text">NASGP membership gives you our full suite of tools, a national peer community, professional representation and content built specifically for sessional practice — none of which you'll find anywhere else.</p>
+          <p class="body-text">NASGP membership gives you our full suite of tools, a national peer community, professional representation and content built specifically for sessional practice, none of which you'll find anywhere else.</p>
         </div>
       </div>
       <div class="benefit-grid stagger">
@@ -1477,22 +1571,22 @@
         <div class="benefit">
           <div class="benefit-num">02</div>
           <h3>LocumDeck</h3>
-          <p>Invoicing, booking and payment management designed for GP locums. Professional invoices, booking tracking and late-payment chasing — in one place.</p>
+          <p>Invoicing, booking and payment management designed for GP locums. Professional invoices, booking tracking and late-payment chasing. All in one place.</p>
         </div>
         <div class="benefit">
           <div class="benefit-num">03</div>
           <h3>Practice Induction</h3>
-          <p>Spip lets you access standardised practice information before you arrive — clinical systems, protocols, emergency contacts — so you can focus on patients from session one.</p>
+          <p>Spip lets you access standardised practice information before you arrive: clinical systems, protocols, emergency contacts. So you can focus on patients from session one.</p>
         </div>
         <div class="benefit">
           <div class="benefit-num">04</div>
           <h3>Peer community</h3>
-          <p>Access to NASGP's online forums, local sessional GP groups and events. Sessional practice can be isolating — it doesn't have to be.</p>
+          <p>Access to NASGP's online forums, local sessional GP groups and events. Sessional practice can be isolating. It doesn't have to be.</p>
         </div>
         <div class="benefit">
           <div class="benefit-num">05</div>
           <h3>The Sessional GP</h3>
-          <p>Our bimonthly magazine — clinical updates, career stories, policy analysis and practical guidance, written for sessional GPs by people who understand the role.</p>
+          <p>Our bimonthly magazine covering clinical updates, career stories, policy analysis and practical guidance, written for sessional GPs by people who understand the role.</p>
         </div>
         <div class="benefit">
           <div class="benefit-num">06</div>
@@ -1507,14 +1601,31 @@
   <section class="tools-section" id="tools">
     <div class="wrap">
       <div class="tools-header fade-up">
-        <span class="eyebrow">Our tools</span>
-        <h2 class="display">Practical tools built for<br>how you <em>actually</em> work</h2>
+        <div class="tools-header-left">
+          <span class="eyebrow">Our tools</span>
+          <h2 class="display">Practical tools built for<br>how you <em>actually</em> work</h2>
+          <p class="body-text" style="margin-top: 20px; font-size: 16px;">We build and maintain tools designed around how sessional GPs actually work. Not how the system assumes you work.</p>
+        </div>
+        <div class="tools-header-right">
+          <div class="tools-header-stat">
+            <div class="t-num">3</div>
+            <div class="t-lbl">Purpose-built tools for sessional GP practice</div>
+          </div>
+          <div class="tools-header-stat">
+            <div class="t-num">4,250<span style="font-size:22px;">+</span></div>
+            <div class="t-lbl">GPs actively using NASGP tools every month</div>
+          </div>
+          <div class="tools-header-stat">
+            <div class="t-num">1</div>
+            <div class="t-lbl">Membership unlocks everything</div>
+          </div>
+        </div>
       </div>
       <div class="tools-bento stagger">
         <div class="bento-card col-7">
           <span class="bento-tag">Invoicing &amp; Booking</span>
           <h3>LocumDeck</h3>
-          <p>The invoicing and booking platform built for GP locums. No more spreadsheets, no more chasing. LocumDeck gives you professional invoicing, booking management and payment tracking — all in one place.</p>
+          <p>The invoicing and booking platform built for GP locums. No more spreadsheets, no more chasing. LocumDeck gives you professional invoicing, booking management and payment tracking. All in one place.</p>
           <ul class="bento-features">
             <li><svg class="check-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Create and send professional invoices in seconds</li>
             <li><svg class="check-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Booking management across multiple practices</li>
@@ -1526,21 +1637,21 @@
         <div class="bento-card col-5 dark">
           <span class="bento-tag">Appraisal</span>
           <h3>AppraisalAid</h3>
-          <p>Appraisal templates, reflective frameworks and guidance built entirely around the sessional GP's unique requirements — not adapted from a partner template.</p>
+          <p>Appraisal templates, reflective frameworks and guidance built entirely around the sessional GP's unique requirements, not adapted from a partner template.</p>
           <a href="#join" class="bento-link">Learn more <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           <div class="bento-bg-num">AA</div>
         </div>
         <div class="bento-card col-4">
           <span class="bento-tag">Practice Induction</span>
           <h3>Spip</h3>
-          <p>Access standardised practice information before you arrive — systems, protocols, emergency contacts. Walk in ready.</p>
+          <p>Access standardised practice information before you arrive: systems, protocols, emergency contacts. Walk in ready.</p>
           <a href="#join" class="bento-link">Learn more <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           <div class="bento-bg-num">SP</div>
         </div>
         <div class="bento-card col-8">
           <span class="bento-tag">Full support model</span>
           <h3>Locum Chambers</h3>
-          <p>The complete model for GP locum support — a local collective of self-employed locums with a dedicated Chamber Manager, Clinical Director, regular online meetings and late payment chasing. The structure of a practice, the freedom of being a locum.</p>
+          <p>The complete model for GP locum support: a local collective of self-employed locums with a dedicated Chamber Manager, Clinical Director, regular online meetings and late payment chasing. The structure of a practice, the freedom of being a locum.</p>
           <ul class="bento-features">
             <li><svg class="check-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated Chamber Manager &amp; Clinical Director</li>
             <li><svg class="check-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Regular online Chamber meetings</li>
@@ -1562,30 +1673,30 @@
           <h2 class="display on-dark">You don't have to work<br><em>in isolation</em></h2>
         </div>
         <div>
-          <p class="body-text community-body">One of the most common things we hear from sessional GPs is that they feel alone. No practice team behind them, no colleague down the hall. NASGP exists to change that — with real, local, human connection across the UK.</p>
+          <p class="body-text community-body">One of the most common things we hear from sessional GPs is that they feel alone. No practice team behind them, no colleague down the hall. NASGP exists to change that, with real, local, human connection across the UK.</p>
         </div>
       </div>
       <div class="community-grid stagger">
         <div class="comm-card">
-          <div class="comm-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div class="comm-card-img">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="GP group meeting" />
           </div>
           <h3>100+ local groups</h3>
-          <p>Sessional GP groups across England, Scotland, Wales and Northern Ireland — where GPs meet, share and support each other in their own area.</p>
+          <p>Sessional GP groups across England, Scotland, Wales and Northern Ireland, where GPs meet, share and support each other in their own area.</p>
         </div>
         <div class="comm-card">
-          <div class="comm-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+          <div class="comm-card-img">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=600&q=80" alt="Podcast recording" />
           </div>
           <h3>The NASGP Podcast</h3>
           <p>Candid conversations with sessional GPs, clinical experts and policy voices. Available on Spotify, Apple Podcasts and all major platforms.</p>
         </div>
         <div class="comm-card">
-          <div class="comm-icon">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+          <div class="comm-card-img">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80" alt="The Sessional GP Magazine" />
           </div>
           <h3>The Sessional GP</h3>
-          <p>Our bimonthly magazine — clinical updates, career stories, policy analysis and real accounts from sessional GPs across the country.</p>
+          <p>Our bimonthly magazine covering clinical updates, career stories, policy analysis and real accounts from sessional GPs across the country.</p>
         </div>
       </div>
       <div class="testimonials-row stagger">
@@ -1597,7 +1708,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="testi-text">"AppraisalAid changed how I approach appraisal entirely. For the first time it felt designed for me as a locum — not a partner template I was trying to squeeze into."</p>
+          <p class="testi-text">"AppraisalAid changed how I approach appraisal entirely. For the first time it felt designed for me as a locum, not a partner template I was trying to squeeze into."</p>
           <div class="testi-by"><strong>Dr Mark T.</strong> GP Locum, South East England</div>
         </div>
         <div class="testi">
@@ -1680,7 +1791,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 NASGP — National Association of Sessional GPs. Registered in England &amp; Wales.</p>
+        <p class="footer-copy">© 2026 NASGP, National Association of Sessional GPs. Registered in England &amp; Wales.</p>
         <div class="footer-legal-links">
           <a href="#">Privacy policy</a>
           <a href="#">Terms of use</a>
