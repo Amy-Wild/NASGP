@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Academy module | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="academy.html" style="color: #0B1F33; text-decoration: none">All modules</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="#" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Go to LocumDeck</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 96px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+
+    <!-- Main column -->
+    <div style="flex: 1 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+      <div>
+        <p style="margin: 0 0 12px; font-size: 15px; font-weight: 600"><a href="academy.html" style="text-decoration: none">Locum Academy</a> / Module 2 of 5</p>
+        <h1 style="margin: 0; font-weight: 800; font-size: 48px; line-height: 1.08; letter-spacing: -0.025em">[Module 2 title]</h1>
+        <p style="margin: 14px 0 0; color: #3A4F6B; font-size: 15px">[XX] min · [X] CPD hours · Presented by [Dr Name], sessional GP</p>
+      </div>
+
+      <template data-kind="if" value="{{locked}}" hint-placeholder-val="{{ false }}">
+        <div style="background: #EDE6F5; border-radius: 14px; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; align-items: start">
+          <span style="font-size: 14px; font-weight: 700; background: #FFFFFF; padding: 6px 12px; border-radius: 99px">Members only</span>
+          <h2 style="margin: 0; font-weight: 800; font-size: 32px; letter-spacing: -0.02em; line-height: 1.15">This module is part of Professional Plus and Chambers.</h2>
+          <p style="margin: 0; color: #2A4566; max-width: 560px">Upgrade from £12 to £25 a month in LocumDeck and all five modules unlock straight away, with CPD certificates for each.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+            <a href="#" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 16px 22px; border-radius: 6px; font-weight: 600">Upgrade in LocumDeck</a>
+            <a href="academy-module.html" style="font-weight: 600; padding: 16px 6px">Try the free taster first</a>
+          </div>
+        </div>
+      </template>
+
+      <template data-kind="if" value="{{unlocked}}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 28px">
+          <div style="aspect-ratio: 16 / 9; background: #0B1F33; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; color: #D6DEE8">
+            <span style="width: 76px; height: 76px; border-radius: 50%; background: #4FA83D; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="#0B1F33" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+            <span style="font-size: 15px">[Video, hosted on Vimeo] · [XX:XX]</span>
+          </div>
+
+          <div style="background: #EEF6E8; border-radius: 14px; padding: 28px 32px">
+            <strong style="font-size: 19px">By the end of this module you'll be able to</strong>
+            <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px; color: #2A4566">
+              <span>[Learning outcome one]</span>
+              <span>[Learning outcome two]</span>
+              <span>[Learning outcome three]</span>
+            </div>
+          </div>
+
+          <div style="font-size: 18px; line-height: 1.7">
+            <h2 style="margin: 0 0 12px; font-weight: 800; font-size: 28px; letter-spacing: -0.02em">Notes</h2>
+            <p style="margin: 0 0 16px">[Module notes from Circle go here. Written summary of the video, key points, links to templates and further reading.]</p>
+            <a href="#" style="font-weight: 600">Download the slides (PDF)</a>
+          </div>
+
+          <!-- Completion -->
+          <div style="border: 2px solid #0B1F33; border-radius: 14px; padding: 32px">
+            <template data-kind="if" value="{{notDone}}" hint-placeholder-val="{{ true }}">
+              <div style="display: flex; flex-direction: column; gap: 18px">
+                <div>
+                  <h2 style="margin: 0; font-weight: 800; font-size: 28px; letter-spacing: -0.02em">Complete the module and get your certificate</h2>
+                  <p style="margin: 8px 0 0; color: #3A4F6B">Your answers appear on your CPD certificate as your reflection.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 6px"><label for="r1" style="font-weight: 600">What was the most useful thing you learned?</label><textarea id="r1" rows="3" style="font: inherit; padding: 12px 14px; border: 1px solid #8A97A3; border-radius: 6px; resize: vertical"></textarea></div>
+                <div style="display: flex; flex-direction: column; gap: 6px"><label for="r2" style="font-weight: 600">What will you do differently in your next session?</label><textarea id="r2" rows="3" style="font: inherit; padding: 12px 14px; border: 1px solid #8A97A3; border-radius: 6px; resize: vertical"></textarea></div>
+                <label style="display: flex; gap: 10px; align-items: center"><input type="checkbox" style="width: 20px; height: 20px; accent-color: #0B1F33"><span>I watched the video and read the notes</span></label>
+                <button type="button" onClick="{{complete}}" style="align-self: start; font: inherit; font-weight: 700; background: #4FA83D; color: #0B1F33; border: 0; padding: 16px 24px; border-radius: 6px; cursor: pointer">Get my CPD certificate</button>
+              </div>
+            </template>
+            <template data-kind="if" value="{{done}}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: center">
+                <div style="flex: 0 0 auto; width: 150px; aspect-ratio: 1 / 1.41; background: #FFFFFF; border: 1px solid #DCE6D6; border-radius: 6px; box-shadow: 0 8px 20px rgba(11,31,51,.12); padding: 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 9px">
+                  <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 13px; padding: 3px 6px; align-self: start">nasgp</span>
+                  <strong style="font-size: 11px; margin-top: 6px">CPD certificate</strong>
+                  <span>[Dr Name]</span>
+                  <span>[Module 2 title]</span>
+                  <span>[X] CPD hours · [Date]</span>
+                </div>
+                <div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px">
+                  <h2 style="margin: 0; font-weight: 800; font-size: 26px; letter-spacing: -0.02em">Module complete. Nicely done.</h2>
+                  <p style="margin: 0; color: #3A4F6B">Your certificate has been emailed to you as a PDF, ready for your appraisal.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 12px">
+                    <a href="#" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 14px 20px; border-radius: 6px; font-weight: 600">Download certificate</a>
+                    <a href="academy-module.html" style="font-weight: 600; padding: 14px 6px">Next: Module 3</a>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Side list -->
+    <aside style="flex: 0 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+      <strong style="font-size: 17px; margin-bottom: 4px">Locum Academy</strong>
+      <template data-kind="for" list="{{list}}" as="m" hint-placeholder-count="5">
+        <a href="academy-module.html" style="display: flex; gap: 12px; align-items: center; padding: 14px; border-radius: 10px; text-decoration: none; color: #0B1F33; background: {{m.bg}}; border: {{m.border}}">
+          <span style="flex: 0 0 auto; width: 32px; height: 32px; border-radius: 50%; background: {{m.dot}}; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center">{{m.mark}}</span>
+          <span style="flex: 1; font-size: 15px; font-weight: 600">{{m.title}}</span>
+        </a>
+      </template>
+    </aside>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"memberView":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":3200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { done: false }; }
+  renderVals() {
+    const member = this.props.memberView ?? true;
+    const list = [1, 2, 3, 4, 5].map((n) => {
+      const current = n === 2;
+      const finished = n === 1;
+      return {
+        title: '[Module ' + n + ' title]',
+        mark: finished ? '✓' : String(n),
+        dot: finished ? '#4FA83D' : (current ? '#0B1F33' : '#EEF6E8'),
+        bg: current ? '#EDE6F5' : '#FFFFFF',
+        border: current ? '1px solid #0B1F33' : '1px solid #DCE6D6'
+      };
+    }).map((m, i) => i === 1 ? { ...m, mark: '2', dot: '#FFFFFF' } : m);
+    return {
+      locked: !member,
+      unlocked: member,
+      done: this.state.done,
+      notDone: !this.state.done,
+      complete: () => this.setState({ done: true }),
+      list
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

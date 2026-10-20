@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Member Resource Hub | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Members" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="resource-hub.html" style="color: #0B1F33; text-decoration: underline; text-decoration-color: #4FA83D; text-decoration-thickness: 3px; text-underline-offset: 8px">Resource Hub</a>
+        <a href="academy.html" style="color: #0B1F33; text-decoration: none">Locum Academy</a>
+        <a href="events.html" style="color: #0B1F33; text-decoration: none">Events</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="#" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Go to LocumDeck</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Welcome + plan -->
+  <section style="background: #EEF6E8">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: start">
+      <div style="flex: 1 1 520px; min-width: 0">
+        <p style="margin: 0 0 12px; font-weight: 600; font-size: 15px; color: #2F6B22">Member Resource Hub</p>
+        <h1 style="margin: 0; font-weight: 800; font-size: 52px; line-height: 1.05; letter-spacing: -0.025em">Welcome back, <span style="position: relative; display: inline-block; white-space: nowrap">[Dr Name].<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h1>
+        <p style="margin: 16px 0 0; font-size: 19px; color: #2A4566">Everything your membership includes, in one place. Templates, guides, courses and events.</p>
+        <div role="group" aria-label="Preview as plan" style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+          <span style="font-size: 14px; font-weight: 600; color: #56687F; margin-right: 4px">Preview as:</span>
+          <template data-kind="for" list="{{tierBtns}}" as="t" hint-placeholder-count="3">
+            <button type="button" onClick="{{t.pick}}" aria-pressed="{{t.active}}" style="font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 99px; cursor: pointer; border: {{t.border}}; background: {{t.bg}}; color: {{t.color}}">{{t.name}}</button>
+          </template>
+        </div>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><strong style="font-size: 19px">Your plan: {{planName}}</strong><span style="color: #56687F; font-size: 15px">{{planPrice}}</span></div>
+        <template data-kind="for" list="{{includes}}" as="i" hint-placeholder-count="6">
+          <div style="display: flex; gap: 10px; align-items: center; font-size: 15px; color: {{i.color}}">
+            <span aria-hidden="true" style="flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%; background: {{i.dot}}; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #0B1F33">{{i.mark}}</span>
+            <span>{{i.label}}</span>
+          </div>
+        </template>
+        <template data-kind="if" value="{{canUpgrade}}" hint-placeholder-val="{{ true }}">
+          <a href="#" style="margin-top: 6px; text-align: center; background: #4FA83D; color: #0B1F33; text-decoration: none; padding: 14px; border-radius: 6px; font-weight: 700">{{upgradeText}}</a>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 96px">
+    <h2 style="margin: 0 0 32px; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Resources</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+      <template data-kind="for" list="{{resources}}" as="r" hint-placeholder-count="9">
+        <div style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px; background: {{r.bg}}">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
+            <span style="font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: {{r.tint}}">{{r.type}}</span>
+            <span style="font-size: 12px; font-weight: 700; color: #56687F">{{r.tierLabel}}</span>
+          </div>
+          <strong style="font-size: 19px; line-height: 1.3; color: {{r.titleColor}}">{{r.title}}</strong>
+          <template data-kind="if" value="{{r.open}}" hint-placeholder-val="{{ true }}">
+            <a href="#" style="margin-top: auto; font-weight: 600; font-size: 15px">{{r.action}}</a>
+          </template>
+          <template data-kind="if" value="{{r.locked}}" hint-placeholder-val="{{ false }}">
+            <span style="margin-top: auto; display: flex; gap: 8px; align-items: center; font-size: 15px; font-weight: 600; color: #2F6B22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Unlock with {{r.tierLabel}}</span>
+          </template>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 24px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+    <a href="academy.html" style="background: #EDE6F5; border-radius: 14px; padding: 32px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 700">Locum Academy</span><strong style="font-size: 24px; letter-spacing: -0.01em">5 modules with CPD certificates</strong><span style="color: #2A4566">{{academyLine}}</span></a>
+    <a href="events.html" style="background: #DDEAF4; border-radius: 14px; padding: 32px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 700">Next event</span><strong style="font-size: 24px; letter-spacing: -0.01em">[Webinar title] · [Date]</strong><span style="color: #2A4566">{{eventLine}}</span></a>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tier: 1 }; }
+  renderVals() {
+    const tier = this.state.tier;
+    const plans = [
+      { name: 'Professional', price: '£12 a month' },
+      { name: 'Professional Plus', price: '£25 a month' },
+      { name: 'Locum Chambers', price: '£45 a month' }
+    ];
+    const tierBtns = plans.map((p, i) => {
+      const active = tier === i + 1;
+      return { name: p.name, active, bg: active ? '#0B1F33' : '#FFFFFF', color: active ? '#FFFFFF' : '#0B1F33', border: active ? '1px solid #0B1F33' : '1px solid #DCE6D6', pick: () => this.setState({ tier: i + 1 }) };
+    });
+    const features = [
+      { label: 'LocumDeck bookings, invoices and pensions', need: 1 },
+      { label: 'Making Tax Digital records', need: 1 },
+      { label: 'Templates and guides library', need: 1 },
+      { label: 'Locum Academy and CPD certificates', need: 2 },
+      { label: 'Mentoring and appraisal support', need: 2 },
+      { label: 'Private Chambers webinars and recordings', need: 3 },
+      { label: 'Local chambers group and admin support', need: 3 },
+      { label: '£11 booking fee instead of £15', need: 3 }
+    ];
+    const includes = features.map((f) => {
+      const has = tier >= f.need;
+      return { label: f.label, mark: has ? '✓' : '+', dot: has ? '#4FA83D' : '#EEF6E8', color: has ? '#0B1F33' : '#56687F' };
+    });
+    const tierName = (n) => plans[n - 1].name;
+    const tints = { Template: '#E2F2DA', Guide: '#DDEAF4', Toolkit: '#FCE3DA', Recording: '#EDE6F5', Checklist: '#F7EAD9' };
+    const items = [
+      { type: 'Template', title: 'Locum terms and conditions template', need: 1, action: 'Download (Word)' },
+      { type: 'Template', title: 'Manual invoice template', need: 1, action: 'Download (Excel)' },
+      { type: 'Guide', title: 'NHS pension Locum A and B forms, step by step', need: 1, action: 'Read the guide' },
+      { type: 'Checklist', title: 'Practice induction checklist for locums', need: 1, action: 'Download (PDF)' },
+      { type: 'Toolkit', title: 'Appraisal toolkit: reflection templates for sessional GPs', need: 2, action: 'Open toolkit' },
+      { type: 'Guide', title: 'Setting safe workload terms with practices', need: 2, action: 'Read the guide' },
+      { type: 'Toolkit', title: 'Difficult situations: what to do and who to call', need: 2, action: 'Open toolkit' },
+      { type: 'Recording', title: '[Chambers webinar recording]', need: 3, action: 'Watch recording' },
+      { type: 'Recording', title: '[Chambers webinar recording]', need: 3, action: 'Watch recording' }
+    ];
+    const resources = items.map((r) => {
+      const open = tier >= r.need;
+      return { type: r.type, title: r.title, action: r.action, tint: tints[r.type], tierLabel: tierName(r.need), open, locked: !open, bg: open ? '#FFFFFF' : '#FAFCF8', titleColor: open ? '#0B1F33' : '#56687F' };
+    });
+    const next = tier < 3 ? plans[tier] : null;
+    return {
+      tierBtns, includes,
+      planName: plans[tier - 1].name, planPrice: plans[tier - 1].price,
+      canUpgrade: tier < 3,
+      upgradeText: next ? 'Upgrade to ' + next.name + ' (' + next.price + ')' : '',
+      resources,
+      academyLine: tier >= 2 ? 'Pick up where you left off: [Module 2]' : 'Included with Professional Plus. Try module 1 free.',
+      eventLine: tier >= 3 ? 'Chambers members only. You’re registered.' : 'Open to all members. Register in one click.'
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

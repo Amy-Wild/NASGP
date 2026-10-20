@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>New to sessional work | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="gps.html" style="color: #0B1F33; text-decoration: underline; text-decoration-color: #4FA83D; text-decoration-thickness: 3px; text-underline-offset: 8px">For GPs</a>
+        <a href="practices.html" style="color: #0B1F33; text-decoration: none">For practices</a>
+        <a href="icbs.html" style="color: #0B1F33; text-decoration: none">For ICBs and PCNs</a>
+        <a href="locumdeck.html" style="color: #0B1F33; text-decoration: none">LocumDeck</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="about.html" style="color: #0B1F33; text-decoration: none">About</a>
+        <a href="join.html" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Start 3 months free</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #DDEAF4">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px 72px">
+      <p style="margin: 0 0 16px; font-weight: 600; font-size: 15px; letter-spacing: .06em; text-transform: uppercase"><a href="gps.html" style="text-decoration: none">For GPs</a> / New to sessional work</p>
+      <h1 style="margin: 0; font-weight: 800; font-size: 60px; line-height: 1.04; letter-spacing: -0.025em; max-width: 900px">New to sessional work? You won't be <span style="position: relative; display: inline-block; white-space: nowrap">doing it alone.<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h1>
+      <p style="margin: 24px 0 0; font-size: 20px; max-width: 680px; color: #2A4566">Working as an independent GP has its own rules on tax, pensions, terms and practice life. Whether you've just qualified, trained abroad, moved area or stepped out of partnership, we'll show you where to start.</p>
+    </div>
+  </section>
+
+  <!-- Route picker -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 88px">
+    <h2 style="margin: 0 0 24px; font-weight: 800; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Which sounds like you?</h2>
+    <div role="tablist" aria-label="Your situation" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px">
+      <template data-kind="for" list="{{tabs}}" as="t" hint-placeholder-count="4">
+        <button type="button" role="tab" aria-selected="{{t.active}}" onClick="{{t.pick}}" style="font: inherit; font-size: 16px; font-weight: 600; padding: 12px 20px; border-radius: 99px; cursor: pointer; border: {{t.border}}; background: {{t.bg}}; color: {{t.color}}">{{t.name}}</button>
+      </template>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px">
+      <div style="flex: 1 1 520px; min-width: 0; border: 1px solid #DCE6D6; border-radius: 14px; padding: 32px">
+        <h3 style="margin: 0 0 6px; font-size: 26px; font-weight: 800; letter-spacing: -0.015em">{{route.title}}</h3>
+        <p style="margin: 0 0 18px; color: #3A4F6B">{{route.intro}}</p>
+        <template data-kind="for" list="{{route.steps}}" as="s" hint-placeholder-count="5">
+          <div style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid #DCE6D6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="m8 12 3 3 5-6"></path></svg>
+            <span>{{s}}</span>
+          </div>
+        </template>
+      </div>
+      <div style="flex: 1 1 340px; min-width: 0; background: #0B1F33; color: #FFFFFF; border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 14px; font-weight: 700; color: #F2765A">We'd suggest</span>
+        <strong style="font-size: 26px; line-height: 1.2; letter-spacing: -0.015em">{{route.plan}}</strong>
+        <p style="margin: 0; color: #D6DEE8">{{route.why}}</p>
+        <a href="{{route.href}}" style="margin-top: auto; align-self: start; background: #4FA83D; color: #0B1F33; text-decoration: none; padding: 14px 20px; border-radius: 6px; font-weight: 700">{{route.cta}}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety net -->
+  <section style="background: #EEF6E8">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px">
+      <h2 style="margin: 0 0 40px; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; max-width: 760px">If something goes wrong, someone has your back</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+        <a href="academy.html" style="background: #FFFFFF; border-radius: 14px; padding: 28px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><strong style="font-size: 21px">Locum Academy</strong><span style="color: #3A4F6B">Five short courses on the parts of locum work nobody taught you. Try one free.</span></a>
+        <a href="membership.html" style="background: #FFFFFF; border-radius: 14px; padding: 28px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><strong style="font-size: 21px">Mentoring</strong><span style="color: #3A4F6B">An experienced sessional GP to talk things through with, on Professional Plus and Chambers.</span></a>
+        <a href="chambers.html" style="background: #FFFFFF; border-radius: 14px; padding: 28px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><strong style="font-size: 21px">Locum Chambers</strong><span style="color: #3A4F6B">A local peer group, admin support and private webinars, so you're never on your own.</span></a>
+        <a href="events.html" style="background: #FFFFFF; border-radius: 14px; padding: 28px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><strong style="font-size: 21px">Free starter webinar</strong><span style="color: #3A4F6B">"Thinking about going locum? Start here." Open to everyone, no membership needed.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 24px 96px">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: end; margin-bottom: 28px">
+      <h2 style="margin: 0; font-weight: 800; font-size: 36px; letter-spacing: -0.02em">Starter guides, free to read</h2>
+      <a href="news.html" style="font-weight: 600">All guides</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+      <a href="article.html" style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; background: #EDE6F5; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px">Guide</span><strong style="font-size: 19px">The Art of GP Locuming</strong><span style="font-size: 15px; color: #56687F">The NASGP handbook for thriving as a GP locum</span></a>
+      <a href="article.html" style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; background: #DDEAF4; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px">Money and pensions</span><strong style="font-size: 19px">NHS pensions for locums, explained</strong><span style="font-size: 15px; color: #56687F">Locum A and B forms without the confusion</span></a>
+      <a href="your-terms.html" style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; text-decoration: none; color: #0B1F33; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; background: #F7EAD9; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px">Wellbeing</span><strong style="font-size: 19px">Setting safe working terms</strong><span style="font-size: 15px; color: #56687F">How to protect your day before you accept a session</span></a>
+    </div>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="about.html" style="color: #D6DEE8">About</a><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { r: 0 }; }
+  renderVals() {
+    const routes = [
+      { name: 'Newly qualified or a registrar', title: 'Ready to work the week after CCT',
+        intro: 'Training covers the clinical side well and the business side hardly at all. Get set up before you qualify.',
+        steps: ['Medical indemnity in place for locum work', 'On the performers list, with details up to date', 'NHS Smartcard ready for every practice system', 'NHS pension set up as a locum', 'Rates and terms decided, LocumDeck profile live'],
+        plan: 'Professional Plus', why: 'The Academy and a mentor cover everything training didn’t. [CONFIRM any registrar offer.]', href: 'membership.html', cta: 'Compare plans' },
+      { name: 'Trained outside the UK', title: 'Finding your feet in UK general practice',
+        intro: 'You know medicine. The NHS paperwork, pensions and practice culture take some learning.',
+        steps: ['Performers list and induction scheme status confirmed', 'How self-employment, tax and NHS pensions work in the UK', 'What practices expect from a locum on the day', 'Indemnity that covers sessional work', 'A local peer group to ask the questions you can’t ask a practice'],
+        plan: 'Locum Chambers', why: 'A local group and admin support make the first year far less isolating.', href: 'chambers.html', cta: 'See Chambers' },
+      { name: 'New to the area', title: 'Getting known by practices nearby',
+        intro: 'Moving means starting again with practices that have never met you.',
+        steps: ['Profile, credentials and terms live on LocumDeck', 'Availability shown to practices in your new area', 'Local rates and practice expectations checked', 'Smartcard and system access sorted', 'Join the local chambers, if there is one'],
+        plan: 'Professional', why: 'Practices book through LocumDeck free, so your profile reaches them from day one.', href: 'membership.html', cta: 'Start 3 months free' },
+      { name: 'Stepping out of partnership', title: 'From partner to portfolio, on your terms',
+        intro: 'Plenty of experience, but working independently is a different job.',
+        steps: ['How your NHS pension changes as a locum', 'Setting limits on patients, visits and duty cover', 'Invoicing, tax records and Making Tax Digital', 'Indemnity and performers list as a sessional GP', 'Deciding how many sessions you actually want'],
+        plan: 'Professional Plus', why: 'Pensions guidance and a mentor who has made the same move.', href: 'your-terms.html', cta: 'Set your safe terms' }
+    ];
+    const tabs = routes.map((r, i) => {
+      const active = this.state.r === i;
+      return { name: r.name, active, bg: active ? '#0B1F33' : '#FFFFFF', color: active ? '#FFFFFF' : '#0B1F33', border: active ? '1px solid #0B1F33' : '1px solid #DCE6D6', pick: () => this.setState({ r: i }) };
+    });
+    return { tabs, route: routes[this.state.r] };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

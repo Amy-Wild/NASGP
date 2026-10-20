@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NASGP events and webinars | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="gps.html" style="color: #0B1F33; text-decoration: none">For GPs</a>
+        <a href="practices.html" style="color: #0B1F33; text-decoration: none">For practices</a>
+        <a href="locumdeck.html" style="color: #0B1F33; text-decoration: none">LocumDeck</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="events.html" style="color: #0B1F33; text-decoration: underline; text-decoration-color: #4FA83D; text-decoration-thickness: 3px; text-underline-offset: 8px">Events</a>
+        <a href="#" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Go to LocumDeck</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #DDEAF4">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 64px">
+      <h1 style="margin: 0; font-weight: 800; font-size: 56px; line-height: 1.05; letter-spacing: -0.025em">Events and <span style="position: relative; display: inline-block; white-space: nowrap">webinars<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h1>
+      <p style="margin: 16px 0 0; font-size: 19px; color: #2A4566; max-width: 640px">Free webinars for anyone thinking about sessional work, member sessions on pensions, tax and practice life, and private webinars for Locum Chambers.</p>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 72px">
+    <div role="group" aria-label="Filter events" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px">
+      <template data-kind="for" list="{{filters}}" as="f" hint-placeholder-count="4">
+        <button type="button" onClick="{{f.pick}}" aria-pressed="{{f.active}}" style="font: inherit; font-size: 15px; font-weight: 600; padding: 10px 18px; border-radius: 99px; cursor: pointer; border: {{f.border}}; background: {{f.bg}}; color: {{f.color}}">{{f.name}}</button>
+      </template>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <template data-kind="for" list="{{shown}}" as="e" hint-placeholder-count="5">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; border: {{e.border}}; border-radius: 14px; padding: 22px 26px; background: {{e.bg}}">
+          <div style="flex: 0 0 76px; text-align: center; background: #FFFFFF; border: 1px solid #DCE6D6; border-radius: 10px; padding: 8px 0">
+            <div style="font-size: 13px; font-weight: 700; color: #2F6B22; text-transform: uppercase">{{e.month}}</div>
+            <div style="font-size: 30px; font-weight: 800; line-height: 1.1">{{e.day}}</div>
+          </div>
+          <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+            <span style="align-self: start; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: {{e.tagBg}}; color: {{e.tagColor}}">{{e.audience}}</span>
+            <strong style="font-size: 20px">{{e.title}}</strong>
+            <span style="font-size: 15px; color: #56687F">{{e.meta}}</span>
+          </div>
+          <a href="#" style="flex: 0 0 auto; background: {{e.btnBg}}; color: {{e.btnColor}}; text-decoration: none; padding: 14px 20px; border-radius: 6px; font-weight: 700; font-size: 15px">{{e.cta}}</a>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <section style="background: #0B1F33; color: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 24px 56px; align-items: center">
+      <div style="flex: 1 1 560px; min-width: 0">
+        <p style="margin: 0 0 10px; font-weight: 600; font-size: 15px; color: #F2765A">Locum Chambers</p>
+        <h2 style="margin: 0; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Private webinars, every [month], for Chambers members.</h2>
+        <p style="margin: 14px 0 0; color: #D6DEE8">Small sessions with GPs, accountants and pension specialists, with time for your questions. Missed one? Every recording is in your Resource Hub.</p>
+      </div>
+      <a href="chambers.html" style="background: #4FA83D; color: #0B1F33; text-decoration: none; padding: 18px 26px; border-radius: 6px; font-weight: 700">See what Chambers includes</a>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 96px">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: end; margin-bottom: 28px">
+      <h2 style="margin: 0; font-weight: 800; font-size: 36px; letter-spacing: -0.02em">Catch up on past webinars</h2>
+      <a href="resource-hub.html" style="font-weight: 600">All recordings</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+      <div style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #E2F2DA">Open to all</span><strong style="font-size: 18px">[Past webinar title]</strong><a href="#" style="font-weight: 600; font-size: 15px">Watch free</a></div>
+      <div style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #DDEAF4">Members</span><strong style="font-size: 18px">[Past webinar title]</strong><a href="#" style="font-weight: 600; font-size: 15px">Watch in the Hub</a></div>
+      <div style="border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span style="align-self: start; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #0B1F33; color: #FFFFFF">Chambers only</span><strong style="font-size: 18px">[Past webinar title]</strong><a href="#" style="font-weight: 600; font-size: 15px">Watch in the Hub</a></div>
+    </div>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="about.html" style="color: #D6DEE8">About</a><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { f: 'All' }; }
+  renderVals() {
+    const style = {
+      'Open to all': { tagBg: '#E2F2DA', tagColor: '#0B1F33', bg: '#FFFFFF', border: '1px solid #DCE6D6', btnBg: '#4FA83D', btnColor: '#0B1F33', cta: 'Register free' },
+      'Members': { tagBg: '#DDEAF4', tagColor: '#0B1F33', bg: '#FFFFFF', border: '1px solid #DCE6D6', btnBg: '#0B1F33', btnColor: '#FFFFFF', cta: 'Register' },
+      'Chambers only': { tagBg: '#0B1F33', tagColor: '#FFFFFF', bg: '#EEF6E8', border: '1px solid #0B1F33', btnBg: '#0B1F33', btnColor: '#FFFFFF', cta: 'Register' }
+    };
+    const events = [
+      { month: 'Nov', day: '[05]', audience: 'Open to all', title: 'Thinking about going locum? Start here', meta: 'Online · 7pm to 8pm · For new and newly qualified GPs' },
+      { month: 'Nov', day: '[12]', audience: 'Chambers only', title: '[Chambers webinar: pensions Q&amp;A with a specialist]', meta: 'Online · 7pm to 8pm · Private session' },
+      { month: 'Nov', day: '[19]', audience: 'Members', title: 'Making Tax Digital: your first quarterly update', meta: 'Online · 12.30pm to 1.15pm · Lunchtime session' },
+      { month: 'Dec', day: '[03]', audience: 'Open to all', title: 'Setting safe workload terms with practices', meta: 'Online · 7pm to 8pm · Open to everyone' },
+      { month: 'Dec', day: '[10]', audience: 'Chambers only', title: '[Chambers webinar: difficult situations clinic]', meta: 'Online · 7pm to 8pm · Private session' }
+    ].map((e) => ({ ...e, title: e.title.replace('&amp;', '&'), ...style[e.audience] }));
+    const names = ['All', 'Open to all', 'Members', 'Chambers only'];
+    const filters = names.map((n) => {
+      const active = this.state.f === n;
+      return { name: n, active, bg: active ? '#0B1F33' : '#FFFFFF', color: active ? '#FFFFFF' : '#0B1F33', border: active ? '1px solid #0B1F33' : '1px solid #DCE6D6', pick: () => this.setState({ f: n }) };
+    });
+    const shown = this.state.f === 'All' ? events : events.filter((e) => e.audience === this.state.f);
+    return { filters, shown };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

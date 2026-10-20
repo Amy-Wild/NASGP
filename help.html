@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NASGP help and FAQs | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="gps.html" style="color: #0B1F33; text-decoration: none">For GPs</a>
+        <a href="practices.html" style="color: #0B1F33; text-decoration: none">For practices</a>
+        <a href="icbs.html" style="color: #0B1F33; text-decoration: none">For ICBs and PCNs</a>
+        <a href="locumdeck.html" style="color: #0B1F33; text-decoration: none">LocumDeck</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="about.html" style="color: #0B1F33; text-decoration: none">About</a>
+        <a href="join.html" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Join free</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #EEF6E8">
+    <div style="max-width: 900px; margin: 0 auto; padding: 72px 24px 56px; text-align: center">
+      <h1 style="margin: 0; font-weight: 800; font-size: 56px; line-height: 1.05; letter-spacing: -0.025em">How can we <span style="position: relative; display: inline-block; white-space: nowrap">help<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>?</h1>
+      <div style="margin: 28px auto 0; max-width: 620px; display: flex; flex-direction: column; gap: 6px; text-align: left">
+        <label for="faq-search" style="font-weight: 600; font-size: 15px">Search help</label>
+        <input id="faq-search" type="search" placeholder="Try ‘pension forms’ or ‘cancel booking’" style="font: inherit; padding: 16px 18px; border: 1px solid #8A97A3; border-radius: 8px; background: #FFFFFF">
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1040px; margin: 0 auto; padding: 56px 24px 80px">
+    <div role="tablist" aria-label="Help topics" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px">
+      <template data-kind="for" list="{{tabs}}" as="t" hint-placeholder-count="4">
+        <button type="button" role="tab" aria-selected="{{t.active}}" onClick="{{t.pick}}" style="font: inherit; font-size: 16px; font-weight: 600; padding: 12px 20px; border-radius: 99px; cursor: pointer; border: {{t.border}}; background: {{t.bg}}; color: {{t.color}}">{{t.name}}</button>
+      </template>
+    </div>
+    <template data-kind="for" list="{{faqs}}" as="q" hint-placeholder-count="5">
+      <div style="border-top: 1px solid #DCE6D6">
+        <button type="button" onClick="{{q.toggle}}" aria-expanded="{{q.open}}" style="width: 100%; background: none; border: 0; padding: 22px 0; font: inherit; font-weight: 600; font-size: 19px; color: #0B1F33; text-align: left; display: flex; justify-content: space-between; gap: 16px; cursor: pointer"><span>{{q.q}}</span><span aria-hidden="true" style="font-size: 24px; line-height: 1; color: #2F6B22">{{q.sign}}</span></button>
+        <template data-kind="if" value="{{q.open}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0 0 22px; color: #3A4F6B; max-width: 760px">{{q.a}}</p>
+        </template>
+      </div>
+    </template>
+  </section>
+
+  <section style="max-width: 1040px; margin: 0 auto; padding: 0 24px 96px">
+    <div style="background: #DDEAF4; border-radius: 14px; padding: 36px 40px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between">
+      <div><strong style="font-size: 22px">Still stuck?</strong><p style="margin: 6px 0 0; color: #2A4566">Our membership team are GPs' people. Monday to Friday, 9am to 5pm.</p></div>
+      <a href="contact.html" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 16px 24px; border-radius: 6px; font-weight: 600">Contact us</a>
+    </div>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="about.html" style="color: #D6DEE8">About</a><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 0, open: 0 }; }
+  renderVals() {
+    const groups = [
+      { name: 'GPs', items: [
+        { q: 'How do I get booked by practices?', a: 'Add your availability, rates and terms to your LocumDeck calendar and switch on Instant Book. Practices near you can then book you directly.' },
+        { q: 'How are my invoices and pension forms sent?', a: 'LocumDeck creates your invoice and Locum A form after each session and sends them to the practice. Locum B forms are produced for you each month.' },
+        { q: 'Can I work remote sessions?', a: 'Yes. Mark sessions as remote in your calendar. Practices on EMIS can book them directly. [CONFIRM remote session fee for GPs]' },
+        { q: 'What is Locum Chambers?', a: 'A local peer group of sessional GPs with admin support and a lower booking fee. See the Locum Chambers page for details.' }
+      ]},
+      { name: 'Practices', items: [
+        { q: 'Does it cost our practice anything?', a: 'No. Practices use LocumDeck free. You pay the GP their agreed fee only.' },
+        { q: 'How do we request cover if nobody is available?', a: 'Click the day on your calendar to request a session. Local GPs are alerted and can offer to cover it.' },
+        { q: 'Can we book the same GP again?', a: 'Yes. GPs you have booked before appear first, so rebooking takes one click.' }
+      ]},
+      { name: 'Membership and billing', items: [
+        { q: 'What happens when my free 3 months end?', a: '[CONFIRM trial-to-paid process and notice given.]' },
+        { q: 'How do I change or cancel my plan?', a: 'From your account in LocumDeck, at any time. [CONFIRM billing on changes.]' },
+        { q: 'Are fees tax-deductible?', a: 'Yes. Membership and booking fees are tax-deductible business expenses.' }
+      ]},
+      { name: 'Account and login', items: [
+        { q: 'I can’t log in', a: 'Use the forgotten password link on the login page. If that doesn’t work, contact the membership team.' },
+        { q: 'How do I update my details?', a: 'Go to My account in LocumDeck. Changes to your compliance documents may need checking before they show to practices.' }
+      ]}
+    ];
+    const tabs = groups.map((g, i) => {
+      const active = this.state.tab === i;
+      return { name: g.name, active, bg: active ? '#0B1F33' : '#FFFFFF', color: active ? '#FFFFFF' : '#0B1F33', border: active ? '1px solid #0B1F33' : '1px solid #DCE6D6', pick: () => this.setState({ tab: i, open: 0 }) };
+    });
+    const faqs = groups[this.state.tab].items.map((f, i) => ({ q: f.q, a: f.a, open: this.state.open === i, sign: this.state.open === i ? '−' : '+', toggle: () => this.setState({ open: this.state.open === i ? -1 : i }) }));
+    return { tabs, faqs };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

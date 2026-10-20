@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NASGP ambassadors | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+input[type=range]{accent-color:#0B1F33}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/x-template" id="dc-tpl">
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0B1F33; background: #FFFFFF; font-size: 17px; line-height: 1.55">
+
+  <div style="background: #0B1F33; color: #FFFFFF; font-size: 14px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+      <span>The independent membership body for sessional GPs, since 1997</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none">Practices: sign in or register</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 700">Go to LocumDeck</a>
+      </div>
+    </div>
+  </div>
+  <header style="border-bottom: 1px solid #DCE6D6; background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+      <a href="index.html" style="display: flex; text-decoration: none" aria-label="NASGP home">
+        <span style="background: #4FA83D; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; padding: 10px 16px 12px">nasgp</span>
+        <span style="background: #0B1F33; color: #FFFFFF; font-family: 'Newsreader', Georgia, serif; font-size: 13px; line-height: 1.15; padding: 8px 12px; display: flex; align-items: center; max-width: 150px">National Association of Sessional GPs</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-weight: 500; font-size: 16px">
+        <a href="gps.html" style="color: #0B1F33; text-decoration: none">For GPs</a>
+        <a href="practices.html" style="color: #0B1F33; text-decoration: none">For practices</a>
+        <a href="icbs.html" style="color: #0B1F33; text-decoration: none">For ICBs and PCNs</a>
+        <a href="locumdeck.html" style="color: #0B1F33; text-decoration: none">LocumDeck</a>
+        <a href="news.html" style="color: #0B1F33; text-decoration: none">News and guides</a>
+        <a href="about.html" style="color: #0B1F33; text-decoration: none">About</a>
+        <a href="#apply" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600">Become an ambassador</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #4FA83D">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 1 1 600px; min-width: 0">
+        <p style="margin: 0 0 16px; font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase">NASGP ambassadors</p>
+        <h1 style="margin: 0; font-weight: 800; font-size: 62px; line-height: 1.03; letter-spacing: -0.025em">You know the practices. <span style="position: relative; display: inline-block; white-space: nowrap">We'll share<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#0B1F33" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span> what they book.</h1>
+        <p style="margin: 24px 0 0; font-size: 20px; max-width: 600px">Introduce a practice, PCN or hub to LocumDeck and earn 30% of the booking revenue from them for two years. Open to GPs, practice managers and PCN leads.</p>
+        <a href="#apply" style="display: inline-block; margin-top: 32px; background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 18px 26px; border-radius: 6px; font-weight: 600">Apply to be an ambassador</a>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+        <h2 style="margin: 0; font-size: 22px; font-weight: 700">What could you earn?</h2>
+        <label for="pr" style="font-weight: 600; font-size: 15px">Practices you introduce: <span style="font-size: 24px; font-weight: 800">{{practices}}</span></label>
+        <input id="pr" type="range" min="1" max="20" value="{{practices}}" onChange="{{setPractices}}" style="width: 100%; height: 32px">
+        <label for="dw" style="font-weight: 600; font-size: 15px">Days a week each one books: <span style="font-size: 24px; font-weight: 800">{{days}}</span></label>
+        <input id="dw" type="range" min="1" max="5" value="{{days}}" onChange="{{setDays}}" style="width: 100%; height: 32px">
+        <div style="background: #EEF6E8; border-radius: 10px; padding: 18px 20px">
+          <div style="font-size: 15px; color: #3A4F6B">Estimated a year</div>
+          <div style="font-weight: 800; font-size: 48px; line-height: 1.1; letter-spacing: -0.02em">£{{yearly}}</div>
+          <div style="font-size: 14px; color: #3A4F6B">£{{twoYear}} over the two years</div>
+        </div>
+        <p style="margin: 0; font-size: 13px; color: #56687F">Illustration only, based on {{share}}% of a £{{fee}} booking fee across {{weeks}} working weeks. [CONFIRM basis of the 30%]</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 96px 24px">
+    <h2 style="margin: 0 0 48px; font-weight: 800; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">How it works</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px">
+      <div style="border-top: 3px solid #4FA83D; padding-top: 20px"><h3 style="margin: 0 0 8px; font-size: 21px">1. Apply</h3><p style="margin: 0; color: #3A4F6B">Tell us who you are and the area you work in. We'll set you up with your own referral link.</p></div>
+      <div style="border-top: 3px solid #4FA83D; padding-top: 20px"><h3 style="margin: 0 0 8px; font-size: 21px">2. Introduce</h3><p style="margin: 0; color: #3A4F6B">Share your link or ready-made emails with practices. We help with demos and onboarding.</p></div>
+      <div style="border-top: 3px solid #4FA83D; padding-top: 20px"><h3 style="margin: 0 0 8px; font-size: 21px">3. They book</h3><p style="margin: 0; color: #3A4F6B">Each time a practice you introduced books a GP, part of the booking fee is credited to you.</p></div>
+      <div style="border-top: 3px solid #4FA83D; padding-top: 20px"><h3 style="margin: 0 0 8px; font-size: 21px">4. Get paid</h3><p style="margin: 0; color: #3A4F6B">See your referrals and earnings in your dashboard. Paid [MONTHLY / QUARTERLY] for two years.</p></div>
+    </div>
+  </section>
+
+  <section style="background: #EEF6E8">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 32px"><h3 style="margin: 0 0 8px; font-size: 21px">GPs</h3><p style="margin: 0; color: #3A4F6B">Recommend LocumDeck to the practices you already work with, and recruit locum colleagues in areas where practices need more cover.</p></div>
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 32px"><h3 style="margin: 0 0 8px; font-size: 21px">Practice managers</h3><p style="margin: 0; color: #3A4F6B">Share what works with neighbouring practices and your local practice manager network.</p></div>
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 32px"><h3 style="margin: 0 0 8px; font-size: 21px">PCN and hub leads</h3><p style="margin: 0; color: #3A4F6B">Bring a whole network onto one way of booking, with one view of who's covering what.</p></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 0">
+    <div style="background: #DDEAF4; border-radius: 14px; padding: 32px 36px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: start">
+      <strong style="flex: 0 0 auto; font-size: 19px">Declaring your interest</strong>
+      <p style="margin: 0; flex: 1 1 520px; color: #2A4566">If you work in the NHS and introduce your own organisation, or one you have influence over, you may need to declare this payment under your employer's conflict of interest policy. Declaring is your responsibility, and we'll give you the details you need. [LINK TO FULL AMBASSADOR TERMS]</p>
+    </div>
+  </section>
+
+  <section id="apply" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 96px">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px 72px">
+      <div style="flex: 1 1 360px; min-width: 0">
+        <h2 style="margin: 0; font-weight: 800; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Apply to be an ambassador</h2>
+        <p style="margin: 16px 0 0; color: #3A4F6B">Our practice partnerships team will be in touch within [2] working days.</p>
+      </div>
+      <form style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 6px"><label for="a-name" style="font-weight: 600; font-size: 15px">Name</label><input id="a-name" type="text" style="font: inherit; padding: 14px 16px; border: 1px solid #8A97A3; border-radius: 6px"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><label for="a-email" style="font-weight: 600; font-size: 15px">Email</label><input id="a-email" type="email" style="font: inherit; padding: 14px 16px; border: 1px solid #8A97A3; border-radius: 6px"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><label for="a-role" style="font-weight: 600; font-size: 15px">I am a</label><select id="a-role" style="font: inherit; padding: 14px 16px; border: 1px solid #8A97A3; border-radius: 6px; background: #FFFFFF"><option>GP</option><option>Practice manager</option><option>PCN or hub lead</option><option>Other</option></select></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><label for="a-area" style="font-weight: 600; font-size: 15px">Area or ICB</label><input id="a-area" type="text" style="font: inherit; padding: 14px 16px; border: 1px solid #8A97A3; border-radius: 6px"></div>
+        <button type="button" style="justify-self: start; font: inherit; font-weight: 700; background: #4FA83D; color: #0B1F33; border: 0; padding: 16px 26px; border-radius: 6px; cursor: pointer">Send application</button>
+      </form>
+    </div>
+  </section>
+
+  <footer style="background: #0B1F33; color: #D6DEE8; font-size: 15px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: center">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; color: #FFFFFF">nasgp</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 24px"><a href="about.html" style="color: #D6DEE8">About</a><a href="help.html" style="color: #D6DEE8">Help</a><a href="contact.html" style="color: #D6DEE8">Contact</a><span>© 2026 NASGP</span></span>
+    </div>
+  </footer>
+</div>
+</script>
+<script type="text/x-dc" data-dc-script data-props='{"bookingFee":{"editor":"float","default":15,"section":"Estimate"},"sharePercent":{"editor":"int","default":30,"section":"Estimate"},"$preview":{"width":1440,"height":3800}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { practices: 3, days: 2 }; }
+  renderVals() {
+    const fee = this.props.bookingFee ?? 15;
+    const share = this.props.sharePercent ?? 30;
+    const weeks = 46;
+    const yearly = Math.round(this.state.practices * this.state.days * weeks * fee * share / 100);
+    const fmt = (n) => n.toLocaleString('en-GB');
+    return {
+      practices: this.state.practices, days: this.state.days,
+      setPractices: (e) => this.setState({ practices: Number(e.target.value) }),
+      setDays: (e) => this.setState({ days: Number(e.target.value) }),
+      yearly: fmt(yearly), twoYear: fmt(yearly * 2), fee, share, weeks
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>
