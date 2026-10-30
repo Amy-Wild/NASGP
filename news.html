@@ -120,19 +120,19 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { topic: 'All' }; }
   renderVals() {
-    const tint = { 'LocumDeck': '#E2F2DA', 'Money and pensions': '#DDEAF4', 'For practices': '#FCE3DA', 'Wellbeing': '#F7EAD9', 'Learning and CPD': '#EDE6F5' };
+    const tint = { 'LocumDeck': '#E2F2DA', 'Money and pensions': '#DDEAF4', 'For practices': '#FCE3DA', 'Wellbeing': '#F7EAD9', 'Learning': '#EDE6F5' };
     const articles = [
       { topic: 'LocumDeck', title: 'NASGP’s LocumDeck added to NHS national framework', meta: 'News · Nov 2022' },
       { topic: 'Money and pensions', title: '[Making Tax Digital: what sessional GPs need to do this quarter]', meta: 'Guide · [Date]' },
       { topic: 'For practices', title: '[Winter cover and the GP access funding change]', meta: 'Guide · [Date]' },
       { topic: 'Wellbeing', title: '[Always coping? Knowing when to step back]', meta: 'Opinion · [Date]' },
-      { topic: 'Learning and CPD', title: '[Appraisal made simpler: templates for sessional GPs]', meta: 'Guide · [Date]' },
+      { topic: 'Learning', title: '[Appraisal made simpler: templates for sessional GPs]', meta: 'Guide · [Date]' },
       { topic: 'For practices', title: 'All Gloucestershire GP practices now on LocumDeck', meta: 'News · Aug 2022' },
       { topic: 'Money and pensions', title: '[NHS pensions for locums: Locum A and B forms explained]', meta: 'Guide · [Date]' },
       { topic: 'LocumDeck', title: '[How remote sessions work on LocumDeck]', meta: 'Guide · [Date]' },
-      { topic: 'Learning and CPD', title: '[Locum Academy: what’s on this term]', meta: 'Events · [Date]' }
+      { topic: 'Learning', title: '[Locum Academy: what’s on this term]', meta: 'Events · [Date]' }
     ].map((a) => ({ ...a, tint: tint[a.topic] }));
-    const names = ['All', 'LocumDeck', 'Money and pensions', 'For practices', 'Wellbeing', 'Learning and CPD'];
+    const names = ['All', 'LocumDeck', 'Money and pensions', 'For practices', 'Wellbeing', 'Learning'];
     const topics = names.map((n) => {
       const active = this.state.topic === n;
       return { name: n, active, bg: active ? '#0B1F33' : (tint[n] || '#FFFFFF'), color: active ? '#FFFFFF' : '#0B1F33', border: active ? '1px solid #0B1F33' : '1px solid #DCE6D6', pick: () => this.setState({ topic: n }) };

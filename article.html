@@ -110,10 +110,10 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
   </footer>
 </div>
 </script>
-<script type="text/x-dc" data-dc-script data-props='{"topic":{"editor":"enum","options":["LocumDeck","Money and pensions","For practices","Wellbeing","Learning and CPD"],"default":"LocumDeck"},"$preview":{"width":1440,"height":3800}}'>
+<script type="text/x-dc" data-dc-script data-props='{"topic":{"editor":"enum","options":["LocumDeck","Money and pensions","For practices","Wellbeing","Learning"],"default":"LocumDeck"},"$preview":{"width":1440,"height":3800}}'>
 class Component extends DCLogic {
   renderVals() {
-    const tints = { 'LocumDeck': '#E2F2DA', 'Money and pensions': '#DDEAF4', 'For practices': '#FCE3DA', 'Wellbeing': '#F7EAD9', 'Learning and CPD': '#EDE6F5' };
+    const tints = { 'LocumDeck': '#E2F2DA', 'Money and pensions': '#DDEAF4', 'For practices': '#FCE3DA', 'Wellbeing': '#F7EAD9', 'Learning': '#EDE6F5' };
     const topic = this.props.topic ?? 'LocumDeck';
     return { topic, tint: tints[topic] || '#E2F2DA' };
   }
