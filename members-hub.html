@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Members area | NASGP preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;font-family:'Inter',system-ui,sans-serif;color:#0B1F33;font-size:17px;line-height:1.55}
+a{color:#0B1F33}a:hover{color:#2F6B22}
+</style>
+<script src="gating.js"></script>
+</head>
+<body>
+
+<div style="background:#0B1F33;color:#FFFFFF;font-size:14px">
+  <div style="max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center">
+    <span>The independent membership body for sessional GPs, since 1997</span>
+    <div style="display:flex;gap:20px">
+      <a href="#" style="color:#FFFFFF;text-decoration:none">Practices: sign in or register</a>
+      <a href="#" style="color:#FFFFFF;text-decoration:none;font-weight:700">Go to LocumDeck</a>
+    </div>
+  </div>
+</div>
+
+<header style="border-bottom:1px solid #DCE6D6;background:#FFFFFF">
+  <div style="max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between">
+    <a href="index.html" style="display:flex;text-decoration:none" aria-label="NASGP home">
+      <span style="background:#4FA83D;color:#FFFFFF;font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:30px;line-height:1;padding:10px 16px 12px">nasgp</span>
+      <span style="background:#0B1F33;color:#FFFFFF;font-family:'Newsreader',Georgia,serif;font-size:13px;line-height:1.15;padding:8px 12px;display:flex;align-items:center;max-width:150px">National Association of Sessional GPs</span>
+    </a>
+    <nav aria-label="Main" style="display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;font-weight:500;font-size:16px">
+      <a href="gps.html" style="color:#0B1F33;text-decoration:none">For GPs</a>
+      <a href="practices.html" style="color:#0B1F33;text-decoration:none">For practices</a>
+      <a href="icbs.html" style="color:#0B1F33;text-decoration:none">For ICBs and PCNs</a>
+      <a href="work-with-nasgp.html" style="color:#0B1F33;text-decoration:none">Work with NASGP</a>
+      <a href="about.html" style="color:#0B1F33;text-decoration:none">About</a>
+      <a href="members-hub.html" style="color:#0B1F33;text-decoration:underline;text-decoration-color:#4FA83D;text-decoration-thickness:3px;text-underline-offset:8px">Members</a>
+      <a href="join.html" style="background:#0B1F33;color:#FFFFFF;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600">Join free</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero — built by JS based on role -->
+<div id="hub-hero"></div>
+
+<div style="max-width:1240px;margin:0 auto;padding:72px 24px 96px">
+
+  <div style="margin-bottom:64px">
+    <h2 style="margin:0 0 6px;font-weight:800;font-size:30px;letter-spacing:-0.02em">Member resources</h2>
+    <p style="margin:0 0 36px;color:#33475B">Available to all paying members: Professional, Plus and Chambers.</p>
+    <div id="member-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));gap:18px"></div>
+  </div>
+
+  <div style="margin-bottom:64px">
+    <h2 style="margin:0 0 6px;font-weight:800;font-size:30px;letter-spacing:-0.02em">Plus and Chambers</h2>
+    <p style="margin:0 0 36px;color:#33475B">One additional feature for Plus and Chambers members.</p>
+    <div id="plus-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));gap:18px;max-width:600px"></div>
+  </div>
+
+  <div>
+    <h2 style="margin:0 0 6px;font-weight:800;font-size:30px;letter-spacing:-0.02em">Chambers</h2>
+    <p style="margin:0 0 36px;color:#33475B">Available to Chambers members.</p>
+    <div id="chambers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));gap:18px;max-width:600px"></div>
+  </div>
+
+</div>
+
+<!-- Join CTA — shown to non-members only -->
+<div id="join-strip" style="display:none;background:#0B1F33">
+  <div style="max-width:1240px;margin:0 auto;padding:72px 24px;display:flex;flex-wrap:wrap;gap:24px 56px;align-items:center;justify-content:space-between">
+    <div>
+      <h2 style="margin:0 0 10px;font-weight:800;font-size:36px;color:#FFFFFF;letter-spacing:-0.02em;line-height:1.1">Ready to join?</h2>
+      <p style="margin:0;color:#D6DEE8;font-size:18px">Three months free, then from &pound;12/month. Cancel any time.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+      <a href="join.html" style="background:#4FA83D;color:#0B1F33;text-decoration:none;padding:18px 28px;border-radius:6px;font-weight:700;font-size:17px">Join free for three months</a>
+      <a href="#" style="color:#FFFFFF;font-weight:600;font-size:17px;text-decoration:none">Log in</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var role = NASGP.role;
+  var isMember = NASGP.can('member');
+
+  // Hero
+  var heros = {
+    public:   { bg:'#EEF6E8', lc:'#2F6B22', label:'Members area',          hc:'#0B1F33', sc:'#3A4F6B', h1:'Unlock everything NASGP offers.',          sub:'Join as a paying member and get access to all the resources below. Three months free, then from \xA312/month.', cta:'<a href="join.html" style="background:#0B1F33;color:#FFFFFF;text-decoration:none;padding:18px 26px;border-radius:6px;font-weight:700;font-size:17px">Join free for three months</a><a href="#" style="color:#0B1F33;font-weight:600;font-size:17px;text-decoration:none;padding:18px 0">Log in</a>' },
+    member:   { bg:'#0B1F33', lc:'#4FA83D', label:'Members area',          hc:'#FFFFFF', sc:'#D6DEE8', h1:'Welcome to your members’ area.',        sub:'Your member resources are unlocked below.', cta:'' },
+    plus:     { bg:'#0B1F33', lc:'#4FA83D', label:'Members area – Plus',     hc:'#FFFFFF', sc:'#D6DEE8', h1:'Welcome to your members’ area.',        sub:'Your member and Plus resources are unlocked below.', cta:'' },
+    chambers: { bg:'#0B1F33', lc:'#4FA83D', label:'Members area – Chambers', hc:'#FFFFFF', sc:'#D6DEE8', h1:'Welcome to your members’ area.',        sub:'All your member, Plus and Chambers resources are unlocked below.', cta:'' }
+  };
+  var h = heros[role] || heros.member;
+  document.getElementById('hub-hero').innerHTML =
+    '<div style="background:' + h.bg + '">' +
+      '<div style="max-width:1240px;margin:0 auto;padding:80px 24px 72px">' +
+        '<p style="margin:0 0 14px;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:' + h.lc + '">' + h.label + '</p>' +
+        '<h1 style="margin:0;font-weight:800;font-size:52px;line-height:1.06;letter-spacing:-0.025em;max-width:720px;color:' + h.hc + '">' + h.h1 + '</h1>' +
+        '<p style="margin:20px 0 0;font-size:19px;max-width:580px;color:' + h.sc + '">' + h.sub + '</p>' +
+        (h.cta ? '<div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px">' + h.cta + '</div>' : '') +
+      '</div>' +
+    '</div>';
+
+  if (!isMember) document.getElementById('join-strip').style.display = '';
+
+  var LOCK = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+
+  function card(opts) {
+    var canAccess = NASGP.can(opts.tier);
+    var upgradeNeeded = isMember && !canAccess;
+    var bg, border, iconBg, iconStroke, hc, bc, linkHtml;
+
+    if (canAccess) {
+      bg = '#FFFFFF'; border = '1px solid #DCE6D6';
+      iconBg = '#EEF6E8'; iconStroke = '#4FA83D';
+      hc = '#0B1F33'; bc = '#33475B';
+      linkHtml = opts.href && opts.href !== '#'
+        ? '<a href="' + opts.href + '" style="margin-top:auto;padding-top:10px;font-weight:600;font-size:15px;color:#2F6B22;text-decoration:none">' + (opts.linkText || 'Open') + ' →</a>'
+        : '<span style="margin-top:auto;padding-top:10px;font-size:14px;color:#7A8FA0;font-style:italic">Coming soon</span>';
+    } else {
+      bg = '#F7F8FA'; border = '1px dashed #C4D0DC';
+      iconBg = '#EAEEF1'; iconStroke = '#8EA0B0';
+      hc = '#56687F'; bc = '#7A8FA0';
+      var upgradeHref = upgradeNeeded ? 'membership.html' : 'join.html';
+      var upgradeText = upgradeNeeded ? 'Upgrade your plan' : 'Join to unlock';
+      linkHtml = '<a href="' + upgradeHref + '" style="margin-top:auto;padding-top:10px;font-weight:600;font-size:14px;color:#56687F;text-decoration:none">' + LOCK + upgradeText + ' →</a>';
+    }
+
+    return '<div style="background:' + bg + ';border:' + border + ';border-radius:14px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">' +
+      '<div style="width:44px;height:44px;background:' + iconBg + ';border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">' +
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="' + iconStroke + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + opts.icon + '</svg>' +
+      '</div>' +
+      '<h3 style="margin:0;font-size:18px;font-weight:700;line-height:1.3;color:' + hc + '">' + opts.title + '</h3>' +
+      '<p style="margin:0;color:' + bc + ';line-height:1.6;font-size:15px">' + opts.desc + '</p>' +
+      linkHtml +
+      '</div>';
+  }
+
+  var memberCards = [
+    { tier:'member', title:'Locum Academy',              icon:'<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',                                                                                   href:'academy.html',               linkText:'Go to Academy',       desc:'CPD and appraisal support built for sessional GPs. Accredited modules and recorded webinars.' },
+    { tier:'member', title:'Rates and terms benchmark',  icon:'<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',                                          href:'your-terms.html',            linkText:'See rates data',      desc:'See what other NASGP members charge. Real data, regularly updated, broken down by region.' },
+    { tier:'member', title:'Terms template',             icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',     href:'your-terms.html',            linkText:'View template',       desc:'Model terms of engagement covering fees, notice, cancellation and expenses. Use or adapt.' },
+    { tier:'member', title:'Business of locuming',       icon:'<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',                                               href:'new-to-sessional-work.html', linkText:'Read the guides',     desc:'Fees, tax, contracts, insurance and pension: the practical and financial side of sessional work.' },
+    { tier:'member', title:'Compliance checklist',       icon:'<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',                                                             href:'#',                          linkText:'',                   desc:'Everything to confirm before taking a session: DBS, indemnity, GMC status, CCG requirements.' },
+    { tier:'member', title:'Webinar recordings',         icon:'<polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>',                                                              href:'#',                          linkText:'',                   desc:'Past NASGP webinars. Clinical, professional development and advocacy sessions.' },
+    { tier:'member', title:'Member offers',              icon:'<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>',                          href:'#',                          linkText:'',                   desc:'Exclusive discounts for NASGP members on medical indemnity, equipment, wellbeing and more.' },
+    { tier:'member', title:'One-to-one support',         icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',  href:'help.html',                  linkText:'Book a call',        desc:'Speak to someone who understands sessional work. Disputes, difficult practices, complaints.' }
+  ];
+
+  var plusCards = [
+    { tier:'plus',     title:'Private community', icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',                                                                                             href:'community.html',             linkText:'Access community',   desc:'Members-only WhatsApp group and access to NASGP in-person events.' }
+  ];
+
+  var chambersCards = [
+    { tier:'chambers', title:'Chambers area',     icon:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',                                                                  href:'chambers.html',              linkText:'Go to Chambers',     desc:'Your local peer group space. Content and features to be confirmed with the Chambers team.' }
+  ];
+
+  document.getElementById('member-grid').innerHTML   = memberCards.map(card).join('');
+  document.getElementById('plus-grid').innerHTML     = plusCards.map(card).join('');
+  document.getElementById('chambers-grid').innerHTML = chambersCards.map(card).join('');
+}());
+</script>
+
+</body>
+</html>
