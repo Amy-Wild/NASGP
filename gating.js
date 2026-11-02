@@ -5,7 +5,6 @@
 
   // Change gating rules here — no page files need editing
   var PAGE_TIERS = {
-    'academy.html':               'member',
     'your-terms.html':            'member',
     'help.html':                  'member',
     'new-to-sessional-work.html': 'member',

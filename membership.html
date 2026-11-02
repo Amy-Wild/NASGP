@@ -71,7 +71,7 @@ input[type=range]{accent-color:#0B1F33}
   <section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 88px">
     <div style="background: #DDEAF4; border-radius: 14px; padding: 40px; display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: center">
       <div style="flex: 1 1 380px; min-width: 0">
-        <p style="margin: 0 0 8px; font-weight: 700; font-size: 15px">Professional, £12 a month</p>
+        <p style="margin: 0 0 8px; font-weight: 700; font-size: 15px">[PLACEHOLDER: tier name] Professional, £12 a month</p>
         <h2 style="margin: 0; font-weight: 800; font-size: 34px; line-height: 1.12; letter-spacing: -0.02em">What £12 a month takes off your hands</h2>
         <p style="margin: 12px 0 0; color: #2A4566">Less than the cost of one hour of an accountant's time.</p>
       </div>
@@ -98,9 +98,9 @@ input[type=range]{accent-color:#0B1F33}
           <thead>
             <tr style="text-align: left; vertical-align: top">
               <th style="padding: 24px; border-bottom: 1px solid #DCE6D6; width: 34%"></th>
-              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6"><div style="font-size: 18px">Professional</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£12</div><div style="font-weight: 500; color: #56687F; font-size: 14px">a month + £15 a booked day</div></th>
-              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6"><div style="font-size: 18px">Professional Plus</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£25</div><div style="font-weight: 500; color: #56687F; font-size: 14px">a month + £15 a booked day</div></th>
-              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6; background: #0B1F33; color: #FFFFFF"><div style="font-size: 18px">Locum Chambers</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£45</div><div style="font-weight: 500; color: #D6DEE8; font-size: 14px">a month + £11 a booked day</div></th>
+              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6"><div style="font-size: 12px; font-weight: 600; color: #56687F; margin-bottom: 4px">[PLACEHOLDER: tier name]</div><div style="font-size: 18px">Professional</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£12</div><div style="font-weight: 500; color: #56687F; font-size: 14px">a month + £15 a booked day</div></th>
+              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6"><div style="font-size: 12px; font-weight: 600; color: #56687F; margin-bottom: 4px">[PLACEHOLDER: tier name]</div><div style="font-size: 18px">Plus</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£25</div><div style="font-weight: 500; color: #56687F; font-size: 14px">a month + £15 a booked day</div></th>
+              <th style="padding: 24px; border-bottom: 1px solid #DCE6D6; background: #0B1F33; color: #FFFFFF"><div style="font-size: 12px; font-weight: 600; color: #D6DEE8; margin-bottom: 4px">[PLACEHOLDER: tier name]</div><div style="font-size: 18px">Chambers</div><div style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">£45</div><div style="font-weight: 500; color: #D6DEE8; font-size: 14px">a month + £11 a booked day</div></th>
             </tr>
           </thead>
           <tbody>
@@ -198,14 +198,14 @@ class Component extends DCLogic {
     }));
     const d = this.state.days;
     const cost = [12 + 15 * d, 25 + 15 * d, 45 + 11 * d];
-    const names = ['Professional', 'Professional Plus', 'Locum Chambers'];
+    const names = [‘Professional [PLACEHOLDER]’, ‘Plus [PLACEHOLDER]’, ‘Chambers [PLACEHOLDER]’];
     let verdict, detail;
     if (cost[2] <= cost[1]) {
-      verdict = 'Chambers works out at £' + cost[2] + ' a month.';
-      detail = 'That’s £' + (cost[1] - cost[2]) + ' less than Professional Plus at ' + d + ' days, with the peer group and webinars on top.';
+      verdict = ‘Chambers works out at £’ + cost[2] + ‘ a month.’;
+      detail = ‘That’s £’ + (cost[1] - cost[2]) + ‘ less than Plus at ‘ + d + ‘ days, with the peer group and webinars on top. [PLACEHOLDER: tier contents to be confirmed]’;
     } else {
-      verdict = 'Professional is £' + cost[0] + ' a month at ' + d + ' days.';
-      detail = 'Plus adds the Academy and mentoring for £13 more. Chambers starts paying for itself at 5 booked days a month.';
+      verdict = ‘Professional works out at £’ + cost[0] + ‘ a month at ‘ + d + ‘ days.’;
+      detail = ‘Plus adds the Academy and mentoring for £13 more. Chambers starts paying for itself at 5 booked days a month. [PLACEHOLDER: tier contents to be confirmed]’;
     }
     const faqData = [
       { q: 'What happens after 3 months free?', a: '[CONFIRM: trial rolls onto your chosen plan, with notice before the first payment.]' },

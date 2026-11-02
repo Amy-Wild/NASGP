@@ -52,7 +52,7 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
     <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: center">
       <div style="flex: 1 1 600px; min-width: 0">
         <p style="margin: 0 0 16px; font-weight: 600; font-size: 15px; letter-spacing: .06em; text-transform: uppercase"><a href="gps.html" style="text-decoration: none">For GPs</a> / Locum Academy</p>
-        <h1 style="margin: 0; font-weight: 800; font-size: 60px; line-height: 1.04; letter-spacing: -0.025em">Five short courses on the parts of locum work <span style="position: relative; display: inline-block; white-space: nowrap">nobody taught you.<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h1>
+        <h1 style="margin: 0; font-weight: 800; font-size: 60px; line-height: 1.04; letter-spacing: -0.025em">Six short courses on the parts of locum work <span style="position: relative; display: inline-block; white-space: nowrap">nobody taught you.<svg aria-hidden="true" viewBox="0 0 200 12" preserveAspectRatio="none" style="position: absolute; left: 0; right: 0; bottom: -0.14em; width: 100%; height: 0.24em; overflow: visible"><path d="M3 8.5 C 55 3.5, 130 2.5, 197 6" fill="none" stroke="#F2765A" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h1>
         <p style="margin: 24px 0 0; font-size: 20px; max-width: 600px; color: #2A4566">Practical, GP-led modules you can finish in an evening. Each one ends with a short reflection and a certificate for your appraisal.</p>
         <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
           <a href="academy-module.html" style="background: #0B1F33; color: #FFFFFF; text-decoration: none; padding: 18px 26px; border-radius: 6px; font-weight: 600">Try the free taster</a>
@@ -71,15 +71,15 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
   <section style="max-width: 1240px; margin: 0 auto; padding: 96px 24px">
     <h2 style="margin: 0 0 40px; font-weight: 800; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">The modules</h2>
     <div style="display: flex; flex-direction: column; gap: 16px">
-      <template data-kind="for" list="{{modules}}" as="m" hint-placeholder-count="5">
-        <a href="academy-module.html" style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; border: 1px solid #DCE6D6; border-radius: 14px; padding: 24px 28px; text-decoration: none; color: #0B1F33">
-          <span style="flex: 0 0 auto; width: 56px; height: 56px; border-radius: 12px; background: {{m.tint}}; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center">{{m.n}}</span>
+      <template data-kind="for" list="{{modules}}" as="m" hint-placeholder-count="6">
+        <a href="{{m.href}}" style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; border: {{m.cardBorder}}; border-radius: 14px; padding: 24px 28px; text-decoration: none; background: {{m.cardBg}}">
+          <span style="flex: 0 0 auto; width: 56px; height: 56px; border-radius: 12px; background: {{m.numBg}}; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center; color: {{m.numColor}}">{{m.n}}</span>
           <span style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
-            <strong style="font-size: 20px">{{m.title}}</strong>
-            <span style="color: #3A4F6B; font-size: 16px">{{m.summary}}</span>
+            <strong style="font-size: 20px; color: {{m.titleColor}}">{{m.title}}</strong>
+            <span style="color: {{m.summaryColor}}; font-size: 16px">{{m.summary}}</span>
           </span>
           <span style="flex: 0 0 auto; font-size: 15px; color: #56687F">{{m.time}}</span>
-          <span style="flex: 0 0 auto; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 99px; background: {{m.badgeBg}}; color: #0B1F33">{{m.badge}}</span>
+          <span style="flex: 0 0 auto; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 99px; background: {{m.badgeBg}}; color: {{m.badgeColor}}">{{m.badge}}</span>
         </a>
       </template>
     </div>
@@ -96,8 +96,8 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
   <section style="max-width: 1240px; margin: 0 auto; padding: 96px 24px">
     <div style="background: #0B1F33; color: #FFFFFF; border-radius: 14px; padding: 56px 48px; display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: center; justify-content: space-between">
       <div style="flex: 1 1 520px; min-width: 0">
-        <h2 style="margin: 0; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -0.02em">All five modules come with Professional Plus and Chambers.</h2>
-        <p style="margin: 12px 0 0; color: #D6DEE8">On Professional at £12? Upgrade to £25 a month from your LocumDeck account and every module unlocks straight away.</p>
+        <h2 style="margin: 0; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -0.02em">All six modules come with [PLACEHOLDER: tier name] Plus and [PLACEHOLDER: tier name] Chambers.</h2>
+        <p style="margin: 12px 0 0; color: #D6DEE8">On [PLACEHOLDER: tier name] at £12? Upgrade from your LocumDeck account and every module unlocks straight away.</p>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 14px">
         <a href="gps.html" style="background: #4FA83D; color: #0B1F33; text-decoration: none; padding: 18px 26px; border-radius: 6px; font-weight: 700">Compare plans</a>
@@ -118,16 +118,28 @@ a{color:#0B1F33}a:hover{color:#2F6B22}
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3400}}'>
 class Component extends DCLogic {
   renderVals() {
-    const tints = ['#E2F2DA', '#DDEAF4', '#FCE3DA', '#F7EAD9', '#EDE6F5'];
-    const modules = [1, 2, 3, 4, 5].map((n) => ({
-      n,
-      title: '[Module ' + n + ' title]',
-      summary: '[One line on what this module helps you do]',
-      time: '[XX] min',
-      tint: tints[n - 1],
-      badge: n === 1 ? 'Free taster' : 'Members',
-      badgeBg: n === 1 ? '#4FA83D' : '#EEF6E8'
-    }));
+    const isMember = window.NASGP ? NASGP.can('member') : false;
+    const tints = ['#E2F2DA', '#DDEAF4', '#FCE3DA', '#F7EAD9', '#EDE6F5', '#DCE6D6'];
+    const modules = [1, 2, 3, 4, 5, 6].map((n) => {
+      const free = n === 1;
+      const open = free || isMember;
+      return {
+        n,
+        title: '[PLACEHOLDER: Module ' + n + ' title — Richard to supply]',
+        summary: '[PLACEHOLDER: One line on what this module helps you do — Richard to supply]',
+        time: '[PLACEHOLDER: XX min]',
+        href: open ? 'academy-module.html' : 'members-hub.html',
+        numBg: open ? tints[n - 1] : '#EAEEF1',
+        numColor: open ? '#0B1F33' : '#8EA0B0',
+        cardBorder: open ? '1px solid #DCE6D6' : '1px dashed #C4D0DC',
+        cardBg: open ? '#FFFFFF' : '#F7F8FA',
+        titleColor: open ? '#0B1F33' : '#56687F',
+        summaryColor: open ? '#3A4F6B' : '#7A8FA0',
+        badge: free ? 'Free taster' : (open ? 'Members' : 'Join to unlock'),
+        badgeBg: free ? '#4FA83D' : (open ? '#EEF6E8' : '#EAEEF1'),
+        badgeColor: free ? '#0B1F33' : (open ? '#2F6B22' : '#56687F')
+      };
+    });
     return { modules };
   }
 }
